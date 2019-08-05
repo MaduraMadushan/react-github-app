@@ -36,10 +36,6 @@ const Overview = ({ id }) => {
     getUserRepos(id)
   }
 
-  console.log(followers)
-  console.log(following)
-  console.log(repos)
-
   const { followers: follo, following: follow, public_repos } = user
   if (loading) return ''
   return (
