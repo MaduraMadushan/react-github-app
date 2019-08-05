@@ -74,6 +74,9 @@ const GithubState = props => {
       `https://api.github.com/users/${username}/repos?sort=created:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`
     )
     dispatch({ type: GET_REPOS, payload: res.data })
+    clearFollowers()
+    clearFollowing()
+    clearGists()
   }
 
   const getUserFollowers = async username => {
@@ -82,6 +85,9 @@ const GithubState = props => {
       `https://api.github.com/users/${username}/followers?client_id=${githubClientId}&client_secret=${githubClientSecret}`
     )
     dispatch({ type: GET_FOLLOWERS, payload: res.data })
+    clearFollowing()
+    clearRepos()
+    clearGists()
   }
 
   const getUserFollowing = async username => {
@@ -90,6 +96,9 @@ const GithubState = props => {
       `https://api.github.com/users/${username}/following?client_id=${githubClientId}&client_secret=${githubClientSecret}`
     )
     dispatch({ type: GET_FOLLOWING, payload: res.data })
+    clearFollowers()
+    clearRepos()
+    clearGists()
   }
 
   const getUserGists = async username => {
@@ -98,6 +107,9 @@ const GithubState = props => {
       `https://api.github.com/users/${username}/gists?client_id=${githubClientId}&client_secret=${githubClientSecret}`
     )
     dispatch({ type: GET_GISTS, payload: res.data })
+    clearFollowers()
+    clearFollowing()
+    clearRepos()
   }
 
   return (

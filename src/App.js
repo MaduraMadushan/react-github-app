@@ -4,6 +4,7 @@ import './App.css'
 
 import GithubState from './context/github/GithubState'
 import Developer from './components/pages/Developer/Developer'
+import Profile from './components/pages/Developer/Profile/Profile'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path='/developer' exact component={Developer} />
+          <Route path='/user/:id' exact component={Profile} />
         </Switch>
       </BrowserRouter>
     </GithubState>
