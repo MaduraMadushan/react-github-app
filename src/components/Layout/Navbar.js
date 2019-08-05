@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav class='navbar navbar-expand-sm navbar-light bg-light fixed-top'>
-      <div class='container'>
-        <Link to='/' class='navbar-brand'>
-          <i class='fab fa-github fa-lg' /> Github
+    <nav className='navbar navbar-expand-sm navbar-light bg-light fixed-top'>
+      <div className='container'>
+        <Link to='/' className='navbar-brand'>
+          <i className='fab fa-github fa-lg' /> Github
         </Link>
         <button
-          class='navbar-toggler'
+          className='navbar-toggler'
           type='button'
           data-toggle='collapse'
           data-target='#navbarNav'
@@ -17,17 +17,17 @@ const Navbar = () => {
           aria-expanded='false'
           aria-label='Toggle navigation'
         >
-          <span class='navbar-toggler-icon' />
+          <span className='navbar-toggler-icon' />
         </button>
-        <div class='collapse navbar-collapse ' id='navbarNav'>
-          <ul class='navbar-nav ml-auto'>
-            <li class='nav-item'>
-              <Link class='nav-link ' to='/developer'>
+        <div className='collapse navbar-collapse ' id='navbarNav'>
+          <ul className='navbar-nav ml-auto'>
+            <li className='nav-item'>
+              <Link className='nav-link ' to='/developer'>
                 Developers
               </Link>
             </li>
-            <li class='nav-item'>
-              <Link class='nav-link' to='/about'>
+            <li className='nav-item'>
+              <Link className='nav-link' to='/about'>
                 About
               </Link>
             </li>

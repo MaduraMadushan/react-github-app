@@ -33,3 +33,21 @@ button:hover,
   outline: 0px !important;
   box-shadow: none !important;
 }
+
+.card-hight {
+  height: 200px;
+  padding-top: 50px;
+}
+
+.card-hire {
+  padding: 50px;
+}
+
+.fas,
+.far {
+  color: #343a40;
+}
+
+main {
+  background-color: #5d6268;
+}

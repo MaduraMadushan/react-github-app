@@ -6,6 +6,7 @@ import GithubState from './context/github/GithubState'
 import Developer from './components/pages/Developer/Developer'
 import Profile from './components/pages/Developer/Profile/Profile'
 import Navbar from './components/Layout/Navbar'
+import Home from './components/pages/Home'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Switch>
+          <Route path='/' exact component={Home} />
           <Route path='/developer' exact component={Developer} />
           <Route path='/user/:id' exact component={Profile} />
         </Switch>
